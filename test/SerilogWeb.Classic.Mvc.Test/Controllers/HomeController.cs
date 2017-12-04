@@ -26,5 +26,13 @@ namespace SerilogWeb.Classic.Mvc.Test.Controllers
 
             return View();
         }
+
+        [Route("Custom/{stringParam}/details/{intParam}")]
+        public ActionResult Custom(string stringParam, int intParam)
+        {
+            ViewBag.Message = $"CustomPage({stringParam}, {intParam})";
+
+            return View();
+        }
     }
 }
