@@ -2,4 +2,4 @@
 
 ASP.NET MVC support for [SerilogWeb.Classic](https://github.com/serilog-web/classic).
 
-*Package* - <a href="https://www.nuget.org/packages/serilogweb.classic.mvc">SerilogWeb.Classic.WebApi</a> | Platforms - .NET 4.5
+*Package* - <a href="https://www.nuget.org/packages/serilogweb.classic.mvc">SerilogWeb.Classic.Mvc</a> | Platforms - .NET 4.5
