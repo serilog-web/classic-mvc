@@ -6,9 +6,9 @@
     <authors>SerilogWeb Contributors</authors>
     <description>Adds ASP.NET MVC enrichers to SerilogWeb.Classic</description>
     <language>en-US</language>
-    <projectUrl>http://github.com/serilog-web/classic-mvc</projectUrl>
-    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
-    <iconUrl>http://serilog-web.github.io/pages/images/serilog-web.png</iconUrl>
+    <projectUrl>https://github.com/serilog-web/classic-mvc</projectUrl>
+    <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <iconUrl>https://serilog-web.github.io/pages/images/serilog-web.png</iconUrl>
     <tags>serilog logging aspnet mvc</tags>
   </metadata>
 </package>
