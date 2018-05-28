@@ -88,6 +88,7 @@
     <Compile Include="Classic\Mvc\StoreMvcInfoInHttpContextActionFilter.cs" />
     <Compile Include="Classic\Mvc\MvcRequestInfoKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerilogWebClassicMvcLoggerConfigurationExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
