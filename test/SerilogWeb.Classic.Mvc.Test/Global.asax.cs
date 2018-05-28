@@ -17,11 +17,7 @@ namespace SerilogWeb.Classic.Mvc.Test
         protected void Application_Start()
         {
             Serilog.Log.Logger = new LoggerConfiguration()
-                .Enrich.With<MvcControllerNameEnricher>()
-                .Enrich.With<MvcRouteDataEnricher>()
-                .Enrich.With<MvcRouteTemplateEnricher>()
-                .Enrich.With<MvcActionNameEnricher>()
-                .WriteTo.Trace(new JsonFormatter())
+                .ReadFrom.AppSettings()
                 .CreateLogger();
 
             AreaRegistration.RegisterAllAreas();
