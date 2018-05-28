@@ -9,11 +9,11 @@ _This package is designed for full framework ASP.NET applications. For ASP.NET C
 This package is used in conjunction with _SerilogWeb.Classic_ and adds ASP.NET MVC specific enrichers.
 
 ## Enrichers
-The following enrichers are available in the `SerilogWeb.Classic.Mvc.Enrichers` namespace:
-- **MvcActionNameEnricher** : adds a property `MvcAction` containing the name of the *Action* being executed in the *MVC Controller*
-- **MvcControllerNameEnricher** : adds a property `MvcController` containing the name of the *Controller* in which a *MVC Action* has executed
-- **MvcRouteDataEnricher** : adds a property `MvcRouteData` containing the dictionary of the *RouteData*
-- **MvcRouteTemplateEnricher** : adds a property `MvcRouteTemplate` containing the *route template* selected by Mvc routing
+The following enrichers are available as extension methods from the `LoggerConfiguration.Enrich` API:
+- **WithMvcActionName** : adds a property `MvcAction` containing the name of the *Action* being executed in the *MVC Controller*
+- **WithMvcControllerName** : adds a property `MvcController` containing the name of the *Controller* in which a *MVC Action* has executed
+- **WithMvcRouteData** : adds a property `MvcRouteData` containing the dictionary of the *RouteData*
+- **WithMvcRouteTemplate** : adds a property `MvcRouteTemplate` containing the *route template* selected by Mvc routing
 
 
 Usage : 
@@ -21,8 +21,8 @@ Usage :
 ```csharp
 var log = new LoggerConfiguration()
     .WriteTo.Console()
-    .Enrich.With<MvcRouteTemplateEnricher>()
-    .Enrich.With<MvcActionNameEnricher>()
+    .Enrich.WithMvcRouteTemplate()
+    .Enrich.WithMvcActionName()
     .CreateLogger();
 ```
 
@@ -31,7 +31,19 @@ To override the property name of the added property:
 ```csharp
 var log = new LoggerConfiguration()
     .WriteTo.Console()
-    .Enrich.With(new MvcRouteTemplateEnricher("RouteTemplate")
+    .Enrich.WithMvcRouteTemplate("RouteTemplate")
     .CreateLogger();
+```
+
+Enrichers can also be defined in a configuration file by using [Serilog.Settings.AppSettings](https://github.com/serilog/serilog-settings-appsettings) as follows:
+
+```xml
+<appSettings>
+    <add key="serilog:using:SerilogWeb.Classic.Mvc" value="SerilogWeb.Classic.Mvc"/>
+    <add key="serilog:enrich:WithMvcActionName"/>
+    <add key="serilog:enrich:WithMvcControllerName"/>
+    <add key="serilog:enrich:WithMvcRouteData"/>
+    <add key="serilog:enrich:WithMvcRouteTemplate"/>
+</appSettings>
 ```
 
