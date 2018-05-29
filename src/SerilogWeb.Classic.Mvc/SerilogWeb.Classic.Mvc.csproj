@@ -41,10 +41,12 @@
       <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Serilog.2.5.0\lib\net45\Serilog.dll</HintPath>
+      <HintPath>..\..\packages\Serilog.2.6.0\lib\net45\Serilog.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="SerilogWeb.Classic, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9462ddd55fbc0e7f, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SerilogWeb.Classic.3.0.20\lib\net45\SerilogWeb.Classic.dll</HintPath>
+    <Reference Include="SerilogWeb.Classic, Version=4.2.0.0, Culture=neutral, PublicKeyToken=9462ddd55fbc0e7f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SerilogWeb.Classic.4.2.41\lib\net45\SerilogWeb.Classic.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -91,7 +93,9 @@
     <Compile Include="SerilogWebClassicMvcLoggerConfigurationExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="SerilogWeb.Classic.Mvc.nuspec" />
     <None Include="SerilogWeb.snk" />
   </ItemGroup>
