@@ -5,8 +5,10 @@
     /// </summary>
     public class MvcActionNameEnricher : BaseMvcContextInfoEnricher
     {
+        public const string MvcActionPropertyName = "MvcAction";
+
         public MvcActionNameEnricher()
-            : this("MvcAction")
+            : this(MvcActionPropertyName)
         {
         }
 

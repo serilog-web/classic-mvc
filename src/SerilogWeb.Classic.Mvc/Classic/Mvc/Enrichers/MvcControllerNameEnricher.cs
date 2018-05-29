@@ -5,8 +5,10 @@
     /// </summary>
     public class MvcControllerNameEnricher : BaseMvcContextInfoEnricher
     {
+        public const string MvcControllerPropertyName = "MvcController";
+
         public MvcControllerNameEnricher()
-            : this("MvcController")
+            : this(MvcControllerPropertyName)
         {
         }
 
