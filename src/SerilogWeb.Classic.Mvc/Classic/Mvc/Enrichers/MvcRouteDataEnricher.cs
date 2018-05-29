@@ -5,8 +5,10 @@
     /// </summary>
     public class MvcRouteDataEnricher : BaseMvcContextInfoEnricher
     {
+        public const string MvcRouteDataPropertyName = "MvcRouteData";
+
         public MvcRouteDataEnricher()
-            : this("MvcRouteData")
+            : this(MvcRouteDataPropertyName)
         {
         }
 
