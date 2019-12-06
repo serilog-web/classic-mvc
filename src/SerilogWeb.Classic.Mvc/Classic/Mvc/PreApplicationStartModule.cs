@@ -7,7 +7,7 @@ namespace SerilogWeb.Classic.Mvc
         public static void Register()
         {
             GlobalFilters.Filters.Add(new StoreMvcInfoInHttpContextActionFilter());
-            GlobalFilters.Filters.Add(new SerilogWebClassicHandleErrorAttribute());
+            GlobalFilters.Filters.Add(new SerilogWebClassicExceptionFilter());
         }
     }
 }
