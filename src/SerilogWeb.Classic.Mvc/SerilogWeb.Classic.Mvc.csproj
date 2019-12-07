@@ -44,7 +44,7 @@
       <HintPath>..\..\packages\Serilog.2.7.1\lib\net45\Serilog.dll</HintPath>
     </Reference>
     <Reference Include="SerilogWeb.Classic, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9462ddd55fbc0e7f, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SerilogWeb.Classic.5.0.48\lib\net45\SerilogWeb.Classic.dll</HintPath>
+      <HintPath>..\..\packages\SerilogWeb.Classic.5.0.52\lib\net45\SerilogWeb.Classic.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -85,6 +85,7 @@
     <Compile Include="Classic\Mvc\Enrichers\MvcRouteDataEnricher.cs" />
     <Compile Include="Classic\Mvc\Enrichers\MvcRouteTemplateEnricher.cs" />
     <Compile Include="Classic\Mvc\PreApplicationStartModule.cs" />
+    <Compile Include="Classic\Mvc\SerilogWebClassicExceptionFilter.cs" />
     <Compile Include="Classic\Mvc\StoreMvcInfoInHttpContextActionFilter.cs" />
     <Compile Include="Classic\Mvc\MvcRequestInfoKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
